@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta Troll</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>CUZ1NH0 HJ?</h1>
+    <div class="buttons">
+        <button id="sim">Sim😏</button>
+        <button id="nao">Não😐</button>
+    </div>
+
+    <script>
+        // Pegando os botões
+        const naoBtn = document.getElementById("nao");
+        const simBtn = document.getElementById("sim");
+
+        // Função pra mover o botão "Não"
+        function moverNao() {
+            const maxX = window.innerWidth - naoBtn.offsetWidth - 20;
+            const maxY = window.innerHeight - naoBtn.offsetHeight - 20;
+            const x = Math.floor(Math.random() * maxX);
+            const y = Math.floor(Math.random() * maxY);
+            naoBtn.style.position = "absolute";
+            naoBtn.style.left = x + "px";
+            naoBtn.style.top = y + "px";
+        }
+
+        // Evento de clique no "Não"
+        naoBtn.addEventListener("click", moverNao);
+
+        // Evento de clique no "Sim"
+        simBtn.addEventListener("click", () => {
+            window.open("https://youtube.com/shorts/r0lpuTkpShM?si=lxxQLrywkVUr3Yrm", "_blank");
+        });
+    </script>
+</body>
+</html>
